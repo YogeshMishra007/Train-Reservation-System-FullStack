@@ -27,21 +27,22 @@ This application uses **PostgreSQL** as the database and **JWT (JSON Web Tokens)
 
 First, clone the repository to your local machine:
 
-```bash
-git clone https://github.com/yourusername/train-booking-application.git
+git clone https://github.com/YogeshMishra007/Train-Reservation-System-FullStack.git
 cd train-booking-application
+
 Install Backend Dependencies
 Navigate to the backend directory and install the required dependencies:
 
 bash
-Copy code
+
 cd backend
 npm install
+
 Install Frontend Dependencies
 Next, navigate to the frontend directory and install the required dependencies:
 
 bash
-Copy code
+
 cd frontend
 npm install
 Setup Instructions
@@ -49,7 +50,7 @@ Configure Environment Variables
 Create a .env file in the root directory of the project and add the following variables:
 
 makefile
-Copy code
+
 DATABASE_URL=your_database_url
 SECRET=your_secret_key
 Replace your_database_url with the URL of your PostgreSQL database (e.g., postgres://username:password@hostname:port/database).
@@ -58,7 +59,7 @@ Start the Backend Server
 Navigate to the backend directory and start the server:
 
 bash
-Copy code
+
 npm start
 The backend server will be running at http://localhost:5000.
 
@@ -66,7 +67,7 @@ Start the Frontend Server
 Navigate to the frontend directory and run the development server:
 
 bash
-Copy code
+
 npm run dev
 The frontend will be running at http://localhost:3000.
 
@@ -82,16 +83,16 @@ Create a new user.
 
 Request Body:
 
-json
-Copy code
+
+
 {
   "username": "string",
   "password": "string"
 }
 Response:
 
-json
-Copy code
+
+
 {
   "message": "User created successfully",
   "user": {
@@ -104,16 +105,16 @@ Login and receive a JWT token.
 
 Request Body:
 
-json
-Copy code
+
+
 {
   "username": "string",
   "password": "string"
 }
 Response:
 
-json
-Copy code
+
+
 {
   "message": "Login successful",
   "token": "string"
@@ -123,8 +124,8 @@ Fetch the list of all seats with their current availability.
 
 Response:
 
-json
-Copy code
+
+
 [
   {
     "id": "integer",
@@ -139,16 +140,16 @@ Reserve seats.
 
 Request Body:
 
-json
-Copy code
+
+
 {
   "userId": "integer",
   "seatCount": "integer"
 }
 Response:
 
-json
-Copy code
+
+
 {
   "message": "Seats reserved successfully",
   "reservedSeats": ["row1seat1", "row2seat3"]
@@ -158,15 +159,15 @@ Cancel reserved seats for the user.
 
 Request Body:
 
-json
-Copy code
+
+
 {
   "userId": "integer"
 }
 Response:
 
-json
-Copy code
+
+
 {
   "message": "Reservation cancelled successfully"
 }
@@ -175,15 +176,15 @@ Get the user ID by providing the username.
 
 Request Body:
 
-json
-Copy code
+
+
 {
   "username": "string"
 }
 Response:
 
-json
-Copy code
+
+
 {
   "userId": "integer"
 }
