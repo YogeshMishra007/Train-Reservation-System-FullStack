@@ -78,21 +78,15 @@ Environment Variables
 DATABASE_URL: The URL of your PostgreSQL database (e.g., postgres://username:password@hostname:port/database).
 SECRET: A secret key used to sign JWT tokens.
 API Documentation
+
 POST /api/signup
 Create a new user.
-
 Request Body:
-
-
-
 {
   "username": "string",
   "password": "string"
 }
 Response:
-
-
-
 {
   "message": "User created successfully",
   "user": {
@@ -100,32 +94,23 @@ Response:
     "username": "string"
   }
 }
+
 POST /api/login
 Login and receive a JWT token.
-
 Request Body:
-
-
-
 {
   "username": "string",
   "password": "string"
 }
 Response:
-
-
-
 {
   "message": "Login successful",
   "token": "string"
 }
+
 GET /api/seats
 Fetch the list of all seats with their current availability.
-
 Response:
-
-
-
 [
   {
     "id": "integer",
@@ -135,62 +120,44 @@ Response:
     "reservedBy": "integer or null"
   }
 ]
+
 POST /api/seats/reserve
 Reserve seats.
-
 Request Body:
-
-
-
 {
   "userId": "integer",
   "seatCount": "integer"
 }
 Response:
-
-
-
 {
   "message": "Seats reserved successfully",
   "reservedSeats": ["row1seat1", "row2seat3"]
 }
+
 POST /api/seats/cancel
 Cancel reserved seats for the user.
-
 Request Body:
-
-
-
 {
   "userId": "integer"
 }
 Response:
-
-
-
 {
   "message": "Reservation cancelled successfully"
 }
+
 POST /api/user-id
 Get the user ID by providing the username.
-
 Request Body:
-
-
-
 {
   "username": "string"
 }
 Response:
-
-
-
 {
   "userId": "integer"
 }
+
+
 Technologies
 Backend: Express.js, Sequelize, PostgreSQL
 Frontend: Next.js, React
 Authentication: JWT (JSON Web Tokens)
-Styling: Tailwind CSS (optional)
-Environment Management: dotenv
